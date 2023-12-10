@@ -2,14 +2,29 @@ package ru.geekbrains.calculator;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 import android.widget.TextView;
+
+import com.google.android.material.switchmaterial.SwitchMaterial;
+
+//1.	Переделайте все кнопки на материал.
+//2.	Все размеры и строки сделайте ресурсами.
+//3.	Создайте стиль для своего приложения.
+//4.	* Создайте светлую и тёмную тему для приложения.
 
 public class MainActivity extends AppCompatActivity {
 
+    // Имя настроек
+    private static final String prefs = "prefs.xml";
+
+    // Имя параметра в настройках
+    private static final String pref_name = "theme";
 
     public static final String NAME_ACTIVITY = "MainActivity";
 
@@ -27,11 +42,31 @@ public class MainActivity extends AppCompatActivity {
     TextView tvResult;
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        boolean isDarkTheme = getSharedPreferences(prefs, MODE_PRIVATE).
+                getBoolean(pref_name, false);
+        if (isDarkTheme) {
+            setTheme(R.style.Theme_CalculatorDark);
+        } else {
+            setTheme(R.style.Theme_Calculator);
+        }
+
         setContentView(R.layout.activity_main);
+
+        SwitchMaterial themeSwitch = findViewById(R.id.SwitchTheme);
+        themeSwitch.setOnCheckedChangeListener(
+                (CompoundButton buttonView, boolean isChecked) -> {
+                    SharedPreferences sharedPreferences = getSharedPreferences(prefs, MODE_PRIVATE);
+                    if (sharedPreferences.getBoolean(pref_name, false) != isChecked) {
+                        sharedPreferences.edit().
+                                putBoolean(pref_name, isChecked).apply();
+                        recreate(); // заново попадём в onCreate
+                    }
+                });
+
 
         Button mButton0 = findViewById(R.id.button0);
         Button mButton00 = findViewById(R.id.button00);
@@ -164,6 +199,7 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
+
     private final View.OnClickListener buttonXClickListener = new View.OnClickListener() {
         @Override
         public void onClick(View view) {
@@ -255,7 +291,7 @@ public class MainActivity extends AppCompatActivity {
                             mResult = first * second;
                             break;
                         case '%':
-                            mResult = (first * second)/100;
+                            mResult = (first * second) / 100;
                             break;
                         case '/':
                             if (mSecond.equals("0")) {
@@ -319,7 +355,10 @@ public class MainActivity extends AppCompatActivity {
     };
 
     private String splitZero(String resultText) {
-        boolean exist0 = resultText.contains(".") || resultText.contains(",");
+        boolean exist0 = false;
+        if (resultText.contains(".") || resultText.contains(",")) {
+            exist0 = true;
+        }
         while (exist0) {
             if (resultText.charAt(resultText.length() - 1) == '0' && resultText.length() != 1) {
                 resultText = resultText.substring(0, resultText.length() - 1);

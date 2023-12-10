@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextViewStyle">
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right|center_vertical</item>
+        <item name="android:layout_margin">@dimen/layout_margin</item>
+        <item name="android:paddingLeft">@dimen/paddingLeft</item>
+        <item name="android:paddingTop">@dimen/paddingTop</item>
+        <item name="android:paddingRight">@dimen/paddingRight</item>
+        <item name="android:paddingBottom">@dimen/paddingBottom</item>
+        <item name="android:textSize">@dimen/text_size</item>
+
+    </style>
+
+
+    <style name="ButtonStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">@dimen/layout_width</item>
+        <item name="android:layout_margin">@dimen/layout_margin</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">#2735E567</item>
+        <item name="android:textSize">@dimen/text_size</item>
+
+    </style>
+
+    <style name="Theme_CalculatorDark"></style>
+
+</resources>
