@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="text_size">24sp</dimen>
-    <dimen name="text_size_2">35sp</dimen>
     <dimen name="layout_width">0dp</dimen>
     <dimen name="layout_height">0dp</dimen>
     <dimen name="layout_margin">5dp</dimen>
@@ -9,4 +8,5 @@
     <dimen name="paddingTop">8dp</dimen>
     <dimen name="paddingRight">16dp</dimen>
     <dimen name="paddingBottom">10dp</dimen>
+    <dimen name="text_size_2" />
 </resources>
