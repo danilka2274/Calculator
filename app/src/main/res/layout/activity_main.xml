@@ -1,198 +1,231 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sky"
-    android:orientation="vertical">
+    android:background="@drawable/bg_screen"
+    android:orientation="vertical"
+    android:padding="@dimen/screen_padding">
 
+    <!-- Верхняя панель: настройки, память -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+        android:baselineAligned="false"
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/Settings"
+            style="@style/Widget.Calculator.Button.Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="@string/buttonSettings"
-            android:textColor="@color/black"
-            android:fontFamily="sans-serif-smallcaps"
-            style="@style/ButtonStyle" />
+            app:icon="@drawable/ic_settings"
+            app:iconGravity="textStart" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonMemory"
+            style="@style/Widget.Calculator.Button.Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/memory_short" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonHistory"
+            style="@style/Widget.Calculator.Button.Toolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/history_short" />
 
     </LinearLayout>
 
     <Space
         android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_height"
-        android:layout_weight="1" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="@dimen/screen_padding" />
 
+    <!-- Живая подсказка «= результат» -->
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/Result"
-        android:layout_width="match_parent"
-        android:background="@drawable/input_text"
-        android:text="@string/Result"
-        android:textColor="@color/black"
-        style="@style/TextViewStyle" />
-
-    <LinearLayout
+        android:id="@+id/Preview"
+        style="@style/Widget.Calculator.Text.Preview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
+ />
+
+    <!-- Основное табло -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/Result"
+        style="@style/Widget.Calculator.Text.Result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input_text"
+        android:ellipsize="start"
+        android:freezesText="true"
+        android:maxLines="1"
+        android:scrollHorizontally="true"
+        android:text="@string/result_zero"
+        android:textIsSelectable="true" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:minHeight="@dimen/screen_padding" />
+
+    <!-- 1 ряд: служебные -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonC"
+            style="@style/Widget.Calculator.Button.Action"
             android:text="@string/buttonC"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            android:contentDescription="@string/desc_clear" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBack"
+            style="@style/Widget.Calculator.Button.Action"
             android:text="@string/buttonBack"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            android:contentDescription="@string/desc_backspace" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonOpenParen"
+            style="@style/Widget.Calculator.Button.Action"
+            android:text="@string/buttonOpenParen" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCloseParen"
+            style="@style/Widget.Calculator.Button.Action"
+            android:text="@string/buttonCloseParen" />
+
+    </LinearLayout>
+
+    <!-- 2 ряд -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSqrt"
+            style="@style/Widget.Calculator.Button.Action"
+            android:text="@string/buttonSqrt" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPers"
-            android:text="@string/buttonPers"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Action"
+            android:text="@string/buttonPers" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSign"
+            style="@style/Widget.Calculator.Button.Action"
+            android:text="@string/buttonSign" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonDiv"
-            android:text="@string/buttonDiv"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Operator"
+            android:text="@string/buttonDiv" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <!-- 3 ряд -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button7"
-            android:text="@string/button7"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button7" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button8"
-            android:text="@string/button8"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button8" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button9"
-            android:text="@string/button9"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button9" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonX"
-            android:text="@string/buttonX"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Operator"
+            android:text="@string/buttonX" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <!-- 4 ряд -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button4"
-            android:text="@string/button4"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button4" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button5"
-            android:text="@string/button5"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button5" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button6"
-            android:text="@string/button6"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button6" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonMinus"
-            android:text="@string/buttonMinus"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Operator"
+            android:text="@string/buttonMinus" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <!-- 5 ряд -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button1"
-            android:text="@string/button1"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button1" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button2"
-            android:text="@string/button2"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button2" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button3"
-            android:text="@string/button3"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button3" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPlus"
-            android:text="@string/buttonPlus"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Operator"
+            android:text="@string/buttonPlus" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/button0"
-            android:text="@string/button0"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+    <!-- 6 ряд -->
+    <LinearLayout style="@style/Widget.Calculator.Row">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button00"
-            android:text="@string/button00"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button00" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button0"
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/button0" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonPt"
-            android:text="@string/buttonPt"
-            android:textColor="@color/black"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Digit"
+            android:text="@string/buttonPt" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonEq"
-            android:text="@string/buttonEq"
-            android:textColor="@color/teal_700"
-            style="@style/ButtonStyle" />
+            style="@style/Widget.Calculator.Button.Equals"
+            android:text="@string/buttonEq" />
 
     </LinearLayout>
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/layout_height"
-        android:layout_weight="1" />
-
 
 </LinearLayout>
