@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/colorBackground"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/card_padding">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/name"
+            style="@style/Widget.MaterialComponents.TextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_padding"
+            android:gravity="start"
+            android:text="@string/buttonSettings"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/text_title"
+            android:textStyle="bold" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_padding"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="@dimen/button_corner"
+            app:cardElevation="0dp"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/card_padding">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/theme_title"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.button.MaterialButtonToggleGroup
+                    android:id="@+id/themeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/button_margin"
+                    android:layout_marginBottom="@dimen/button_margin"
+                    app:selectionRequired="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/themeSystem"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        android:text="@string/theme_system_short"
+                        android:textSize="@dimen/text_toolbar"
+                        app:cornerRadius="@dimen/button_corner" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/themeLight"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        android:text="@string/theme_light_short"
+                        android:textSize="@dimen/text_toolbar"
+                        app:cornerRadius="@dimen/button_corner" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/themeDark"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/button_height"
+                        android:layout_weight="1"
+                        android:text="@string/theme_dark_short"
+                        android:textSize="@dimen/text_toolbar"
+                        app:cornerRadius="@dimen/button_corner" />
+
+                </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/SwitchSound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/toolbar_button_height"
+                    android:text="@string/SwitchSound"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body" />
+
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/SwitchVibration"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/toolbar_button_height"
+                    android:text="@string/SwitchVibration"
+                    android:textColor="?attr/colorOnSurface"
+                    android:textSize="@dimen/text_body" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/card_padding"
+            android:text="@string/settings_hint"
+            android:textColor="?attr/colorOnSurface"
+            android:alpha="0.7"
+            android:textSize="@dimen/text_body" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonReturn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:text="@string/buttonReturn"
+            android:textSize="@dimen/text_body"
+            app:cornerRadius="@dimen/button_corner" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/card_padding"
+            android:gravity="center"
+            android:alpha="0.5"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="@dimen/text_toolbar" />
+
+    </LinearLayout>
+</ScrollView>

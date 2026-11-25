@@ -1,3 +1,83 @@
 <resources>
-    <string name="app_name">calculator</string>
+    <string name="app_name">Калькулятор</string>
+
+    <!-- Табло -->
+    <string name="result_zero">0</string>
+    <string name="preview_format">= %1$s</string>
+
+    <!-- Клавиатура -->
+    <string name="button0">0</string>
+    <string name="button1">1</string>
+    <string name="button2">2</string>
+    <string name="button3">3</string>
+    <string name="button4">4</string>
+    <string name="button5">5</string>
+    <string name="button6">6</string>
+    <string name="button7">7</string>
+    <string name="button8">8</string>
+    <string name="button9">9</string>
+    <string name="button00">00</string>
+    <string name="buttonPt">,</string>
+    <string name="buttonEq">=</string>
+    <string name="buttonPlus">+</string>
+    <string name="buttonMinus">−</string>
+    <string name="buttonX">×</string>
+    <string name="buttonDiv">÷</string>
+    <string name="buttonPers">%</string>
+    <string name="buttonSqrt">√</string>
+    <string name="buttonSign">±</string>
+    <string name="buttonOpenParen">(</string>
+    <string name="buttonCloseParen">)</string>
+    <string name="buttonBack">⌫</string>
+    <string name="buttonC">C</string>
+
+    <!-- Доступность -->
+    <string name="desc_clear">Очистить ввод</string>
+    <string name="desc_backspace">Удалить последний символ</string>
+    <string name="desc_settings">Настройки</string>
+    <string name="desc_memory">Память калькулятора</string>
+    <string name="desc_history">История вычислений</string>
+    <string name="desc_result">Результат вычисления</string>
+
+    <!-- Настройки -->
+    <string name="buttonSettings">Настройки</string>
+    <string name="buttonReturn">Назад</string>
+    <string name="SwitchTheme">Тёмная тема</string>
+    <string name="theme_title">Оформление</string>
+    <string name="theme_system">Как в системе</string>
+    <string name="theme_light">Светлая тема</string>
+    <string name="theme_dark">Тёмная тема</string>
+    <string name="theme_system_short">Система</string>
+    <string name="theme_light_short">Светлая</string>
+    <string name="theme_dark_short">Тёмная</string>
+    <string name="SwitchSound">Звук клавиш</string>
+    <string name="SwitchVibration">Вибрация</string>
+    <string name="settings_about">Калькулятор %1$s</string>
+    <string name="settings_hint">Поддерживаются скобки, корень и проценты: 200+10% = 220</string>
+
+    <!-- Память -->
+    <string name="memory_short">M</string>
+    <string name="memory_title">Память</string>
+    <string name="memory_value">В памяти: %1$s</string>
+    <string name="memory_recall">MR — вставить</string>
+    <string name="memory_add">M+ — прибавить</string>
+    <string name="memory_subtract">M− — вычесть</string>
+    <string name="memory_clear">MC — очистить</string>
+    <string name="memory_saved">Сохранено в памяти</string>
+    <string name="memory_empty">Память пуста</string>
+
+    <!-- История -->
+    <string name="history_short">⏱</string>
+    <string name="history_title">История</string>
+    <string name="history_empty">Пока ничего не посчитано</string>
+    <string name="history_clear">Очистить историю</string>
+    <string name="history_long_press_hint">Долгое нажатие на запись — вставить результат</string>
+
+    <!-- Ошибки -->
+    <string name="error_empty">Введите выражение</string>
+    <string name="error_syntax">Некорректное выражение</string>
+    <string name="error_divide_by_zero">На ноль делить нельзя</string>
+    <string name="error_invalid_sqrt">Корень из отрицательного числа</string>
+    <string name="error_overflow">Слишком большое число</string>
+    <string name="error_unknown">Ошибка вычисления</string>
 </resources>

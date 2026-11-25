@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Брендовые цвета -->
+    <color name="brand_primary">#2F5CFF</color>
+    <color name="brand_primary_dark">#1B3FC4</color>
+    <color name="brand_primary_light">#9DB4FF</color>
+    <color name="accent">#FF7043</color>
+    <color name="accent_dark">#D84315</color>
+    <color name="accent_light">#FFAB91</color>
+
+    <!-- Базовые -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="error">#B00020</color>
+
+    <!-- Светлая тема -->
+    <color name="surface_light">#F4F6FB</color>
+    <color name="text_primary_light">#1B1D22</color>
+    <color name="key_digit_light">#FFFFFF</color>
+    <color name="key_operator_light">#DDE6FF</color>
+    <color name="key_action_light">#E8ECF6</color>
+
+    <!-- Тёмная тема -->
+    <color name="surface_dark">#12141A</color>
+    <color name="text_primary_dark">#F2F4F8</color>
+    <color name="key_digit_dark">#232733</color>
+    <color name="key_operator_dark">#25365C</color>
+    <color name="key_action_dark">#2E3340</color>
+
+    <!-- Старые имена (используются в values-night и совместимости) -->
+    <color name="purple_200">@color/brand_primary_light</color>
+    <color name="purple_500">@color/brand_primary</color>
+    <color name="purple_700">@color/brand_primary_dark</color>
+    <color name="teal_200">@color/accent_light</color>
+    <color name="teal_700">@color/accent_dark</color>
 </resources>

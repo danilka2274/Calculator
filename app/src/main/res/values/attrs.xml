@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Цвета клавиатуры, чтобы светлая и тёмная темы выглядели одинаково «правильно». -->
+    <attr name="calculatorScreenBackground" format="reference" />
+    <attr name="calculatorDigitBackground" format="color|reference" />
+    <attr name="calculatorDigitText" format="color|reference" />
+    <attr name="calculatorOperatorBackground" format="color|reference" />
+    <attr name="calculatorOperatorText" format="color|reference" />
+    <attr name="calculatorActionBackground" format="color|reference" />
+    <attr name="calculatorActionText" format="color|reference" />
+</resources>

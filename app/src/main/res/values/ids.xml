@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- id, объявленные явно (используются в коде настроек) -->
+    <item name="buttonReturn" type="id" />
+    <item name="SwitchTheme" type="id" />
+    <item name="SwitchSound" type="id" />
+    <item name="SwitchVibration" type="id" />
+    <item name="themeGroup" type="id" />
+    <item name="themeSystem" type="id" />
+    <item name="themeLight" type="id" />
+    <item name="themeDark" type="id" />
+</resources>

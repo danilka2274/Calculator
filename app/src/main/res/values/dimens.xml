@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="screen_padding">12dp</dimen>
+    <dimen name="button_margin">4dp</dimen>
+    <dimen name="button_height">64dp</dimen>
+    <dimen name="button_corner">18dp</dimen>
+    <dimen name="toolbar_button_height">44dp</dimen>
+    <dimen name="icon_size">18dp</dimen>
+
+    <dimen name="text_result">52sp</dimen>
+    <dimen name="text_result_min">24sp</dimen>
+    <dimen name="text_preview">18sp</dimen>
+    <dimen name="text_button">26sp</dimen>
+    <dimen name="text_button_operator">28sp</dimen>
+    <dimen name="text_toolbar">13sp</dimen>
+    <dimen name="text_body">16sp</dimen>
+    <dimen name="text_title">22sp</dimen>
+
+    <dimen name="result_min_height">96dp</dimen>
+    <dimen name="result_padding_h">16dp</dimen>
+    <dimen name="result_padding_v">12dp</dimen>
+    <dimen name="preview_padding_bottom">4dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+
+    <!-- Старые имена, чтобы не ломать существующие ссылки -->
+    <dimen name="text_size">@dimen/text_button</dimen>
+    <dimen name="text_size_2">@dimen/text_body</dimen>
+    <dimen name="layout_width">0dp</dimen>
+    <dimen name="layout_height">0dp</dimen>
+    <dimen name="layout_margin">@dimen/button_margin</dimen>
+    <dimen name="paddingLeft">8dp</dimen>
+    <dimen name="paddingTop">8dp</dimen>
+    <dimen name="paddingRight">16dp</dimen>
+    <dimen name="paddingBottom">10dp</dimen>
+</resources>
